@@ -1,4 +1,10 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :pages
+
+  map.resources :playlists
+  map.resources :users
+  map.root :controller => 'users', :action => 'new'
+
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:
