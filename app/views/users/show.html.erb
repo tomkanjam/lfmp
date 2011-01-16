@@ -3,6 +3,19 @@
   <%=h @user.name %>
 </p>
 
+  <table>
+  <tr>
+    <th>Playlists</th>
+  </tr>
+
+<% @user.playlists.each do |playlist| %>
+  <tr>
+    <td><%=h playlist.name %></td>
+  </tr>
+<% end %>
+</table>
+
+
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
