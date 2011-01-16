@@ -45,17 +45,21 @@ class UsersController < ApplicationController
     #check if user exists and get playlists
     @p = LastFM::User.get_playlists(:user => params[:user][:name])
     if @p["error"] == 6
-      redirect_to(root, :notice => 'We couldn\'t find the Username \"params[:user][:name]\". Try again!')
+      #*****get this working***********
+      redirect_to("users/new", :notice => 'We couldnt find that Username. Try again!')
     else
       @u = User.find_or_create_by_name(params[:user][:name])
-      if @p["playlists"]["playlist"].first.empty? == false
+      
+      if @p["playlists"]["playlist"]["title"]
+        @np = @u.playlists.build(:name => @p["playlists"]["playlist"]["title"], :lastfm_id => @p["playlists"]["playlist"]["id"])  
+        @np.save
+      
+      elsif @p["playlists"]["playlist"].first.empty? == false
         @p["playlists"]["playlist"].each do |p|
-          @np = @u.playlists.build(:name => p["title"])  
+          @np = @u.playlists.build(:name => p["title"], :lastfm_id => p["id"])  
           @np.save  
         end
-      elsif @p["playlists"]["playlist"]["title"]
-        @np = @u.playlists.build(:name => @p["playlists"]["playlist"]["title"])  
-        @np.save
+      
       else
         redirect_to(root, :notice => 'Sorry, something went wrong. We\'re working on it!')
       end
