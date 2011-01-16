@@ -1,4 +1,6 @@
 require 'lastfm'
+require 'youtube_it'
+
 
 class UsersController < ApplicationController
    
@@ -33,16 +35,15 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
-
   def create
     require 'open-uri'
   	LastFM.api_key = "c44173b28da0543a105aece7c1ad4e17"
     LastFM.client_name = "gigkong"
+    ytclient = YouTubeIt::Client.new
     
     #check if user exists and get playlists
     @playlists = LastFM::User.get_playlists(:user => params[:user][:name])
     if @playlists["error"] == 6
-      #*****get this working***********
       redirect_to("http://192.168.27.65:3000", :notice => 'We couldnt find that Username. Try again!')
     else
       @u = User.find_or_create_by_name(params[:user][:name])
@@ -53,7 +54,9 @@ class UsersController < ApplicationController
           @newp = @u.playlists.find_or_create_by_lastfm_id(:lastfm_id => p["id"], :name => p["title"], :playlist_url => url) 
           @tracklist = LastFM::Playlist.fetch(:playlistURL => url)["playlist"]["trackList"]["track"]
           @tracklist.each do |t|
-            @newp.tracks.find_or_create_by_track_name_and_artist_name(:track_name => t["title"], :artist_name => t["creator"])
+            track_search_name = t["creator"] << " " << t["title"] 
+            yt_url = ytclient.videos_by(:query => track_search_name, :max_results => 1, :format => 5, :category => 'music') 
+            @newp.tracks.find_or_create_by_track_name_and_artist_name(:track_name => t["title"], :artist_name => t["creator"], :yt_url => yt_url)
           end
         end
   
@@ -65,12 +68,12 @@ class UsersController < ApplicationController
           @newp = @u.playlists.find_or_create_by_lastfm_id(:lastfm_id => @playlists["playlists"]["playlist"]["id"], :name => @playlists["playlists"]["playlist"]["title"], :playlist_url => url)
           @tracklist = LastFM::Playlist.fetch(:playlistURL => url)["playlist"]["trackList"]["track"]
           @tracklist.each do |t|
-            @newp.tracks.find_or_create_by_track_name_and_artist_name(:track_name => t["title"], :artist_name => t["creator"])
+            track_search_name = t["creator"] << " " << t["title"] 
+            ytreply = ytclient.videos_by(:query => track_search_name, :max_results => 1, :format => 5, :category => 'music') 
+            @newp.tracks.find_or_create_by_track_name_and_artist_name(:track_name => t["title"], :artist_name => t["creator"], :yt_url => ytreply.videos.first.embed_url)
           end
         end
-        @tracklist.each do |t| @newp.tracks.find_or_create_by_track_name_and_artist_name(:track_name => t["title"], :artist_name => t["creator"]) end
-          
-        
+              
         
         #@np = @u.playlists.build(:name => @p["playlists"]["playlist"]["title"], :lastfm_id => @p["playlists"]["playlist"]["id"])  
         #@np.save
