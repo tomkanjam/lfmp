@@ -1,3 +1,5 @@
+require 'lastfm'
+
 class UsersController < ApplicationController
    
   def index
@@ -20,35 +22,57 @@ class UsersController < ApplicationController
     end
   end
 
-  # GET /users/new
-  # GET /users/new.xml
+
   def new
+    @user = User.new
     
-      @user = User.new
+    
+    
     
   end
 
-  # GET /users/1/edit
+
   def edit
     @user = User.find(params[:id])
   end
 
-  # POST /users
-  # POST /users.xml
+
   def create
-    if User.find_by_name(params[:name]).nil?
-      @user = User.new(params[:user])
-      @user.save
-      redirect_to @user
+    require 'open-uri'
+  	LastFM.api_key = "c44173b28da0543a105aece7c1ad4e17"
+    LastFM.client_name = "gigkong"
+    
+    #check if user exists and get playlists
+    @p = LastFM::User.get_playlists(params[:user][:name])
+    if @p["error"] == 6
+      redirect_to(root, :notice => 'We couldn\'t find the Username \"params[:user][:name]\". Try again!')
     else
+      @u = User.find_or_create_by_name(params[:user][:name])
+      if @p["playlists"]["playlist"].first.empty? == false
+        @p["playlists"]["playlist"].each do |p|
+          @np = @u.playlists.build(:name => p["title"])  
+          @np.save   
+        end
+      elsif @p["playlists"]["playlist"]["title"]
+        @np = @u.playlists.build(:name => @p["playlists"]["playlist"]["title"])  
+        @np.save
+      else
+        redirect_to(root, :notice => 'Sorry, something went wrong. We\'re working on it!')
+      end
+    end  
+
+  
     
     
-    redirect_to User.find_by_name("jim")
-    end
+    
+    
+    
+    
+    redirect_to @u
+    
   end
 
-  # PUT /users/1
-  # PUT /users/1.xml
+
   def update
     @user = User.find(params[:id])
 
@@ -63,8 +87,7 @@ class UsersController < ApplicationController
     end
   end
 
-  # DELETE /users/1
-  # DELETE /users/1.xml
+
   def destroy
     @user = User.find(params[:id])
     @user.destroy
