@@ -50,15 +50,18 @@ class UsersController < ApplicationController
     else
       @u = User.find_or_create_by_name(params[:user][:name])
       
-      if @p["playlists"]["playlist"]["title"]
-        @np = @u.playlists.build(:name => @p["playlists"]["playlist"]["title"], :lastfm_id => @p["playlists"]["playlist"]["id"])  
-        @np.save
-      
-      elsif @p["playlists"]["playlist"].first.empty? == false
+      if @p["playlists"]["playlist"].respond_to?("first")
         @p["playlists"]["playlist"].each do |p|
-          @np = @u.playlists.build(:name => p["title"], :lastfm_id => p["id"])  
-          @np.save  
+          @u.playlists.find_or_create_by_lastfm_id(:lastfm_id => p["id"], :name => p["title"])  
         end
+      
+      elsif @p["playlists"]["playlist"].has_key?("title")
+        @u.playlists.find_or_create_by_lastfm_id(:lastfm_id => @p["playlists"]["playlist"]["id"], :name => @p["playlists"]["playlist"]["title"])
+        
+        #@np = @u.playlists.build(:name => @p["playlists"]["playlist"]["title"], :lastfm_id => @p["playlists"]["playlist"]["id"])  
+        #@np.save
+      
+      
       
       else
         redirect_to(root, :notice => 'Sorry, something went wrong. We\'re working on it!')
