@@ -26,9 +26,6 @@ class UsersController < ApplicationController
   def new
     @user = User.new
     
-    
-    
-    
   end
 
 
@@ -46,25 +43,33 @@ class UsersController < ApplicationController
     @p = LastFM::User.get_playlists(:user => params[:user][:name])
     if @p["error"] == 6
       #*****get this working***********
-      redirect_to("users/new", :notice => 'We couldnt find that Username. Try again!')
+      redirect_to("http://192.168.27.65:3000", :notice => 'We couldnt find that Username. Try again!')
     else
       @u = User.find_or_create_by_name(params[:user][:name])
       
       if @p["playlists"]["playlist"].respond_to?("first")
         @p["playlists"]["playlist"].each do |p|
-          @u.playlists.find_or_create_by_lastfm_id(:lastfm_id => p["id"], :name => p["title"])  
+          url = "lastfm://playlist/" << p["id"]
+          @u.playlists.find_or_create_by_lastfm_id(:lastfm_id => p["id"], :name => p["title"], :playlist_url => url) 
+          LastFM::Playlist.fetch(:playlistURL => "lastfm://playlist/8188917")
         end
-      
-      elsif @p["playlists"]["playlist"].has_key?("title")
-        @u.playlists.find_or_create_by_lastfm_id(:lastfm_id => @p["playlists"]["playlist"]["id"], :name => @p["playlists"]["playlist"]["title"])
+  
+      elsif @p.has_key?("playlists")
+        if @p["playlists"].has_key?("user")
+          redirect_to("http://192.168.27.65:3000", :notice => 'This user does not have any Last.fm playlists') and return
+        elsif @p["playlists"]["playlist"].has_key?("title")
+          url = "lastfm://playlist/" << @p["playlists"]["playlist"]["id"]
+          @u.playlists.find_or_create_by_lastfm_id(:lastfm_id => @p["playlists"]["playlist"]["id"], :name => @p["playlists"]["playlist"]["title"], :playlist_url => url)
+       
+        end
+        
+        
         
         #@np = @u.playlists.build(:name => @p["playlists"]["playlist"]["title"], :lastfm_id => @p["playlists"]["playlist"]["id"])  
         #@np.save
-      
-      
-      
+    
       else
-        redirect_to(root, :notice => 'Sorry, something went wrong. We\'re working on it!')
+        redirect_to("http://192.168.27.65:3000", :notice => 'Sorry, something went wrong. We\'re working on it!') and return
       end
       redirect_to @u
     end 
