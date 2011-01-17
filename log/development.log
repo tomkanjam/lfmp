@@ -5972,3 +5972,585 @@ Processing UsersController#new (for 192.168.27.247 at 2011-01-17 19:48:01) [GET]
 Rendering template within layouts/users
 Rendering users/new
 Completed in 14ms (View: 7, DB: 2) | 200 OK [http://192.168.27.65/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 192.168.27.247 at 2011-01-17 20:40:49) [GET]
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering template within layouts/users
+Rendering users/index
+  [4;36;1mUser Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 20ms (View: 11, DB: 1) | 200 OK [http://192.168.27.65/users]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#destroy (for 192.168.27.247 at 2011-01-17 20:40:53) [DELETE]
+  Parameters: {"authenticity_token"=>"QzE6VL6yFilEY8ZSUCmPP/tupszu+F2QYXfboJGSKjg=", "id"=>"5"}
+  [4;35;1mUser Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 5) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Destroy (0.3ms)[0m   [0;1mDELETE FROM `users` WHERE `id` = 5[0m
+  [4;35;1mSQL (18.2ms)[0m   [0mCOMMIT[0m
+Redirected to http://192.168.27.65:3000/users
+Completed in 28ms (DB: 19) | 302 Found [http://192.168.27.65/users/5]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 192.168.27.247 at 2011-01-17 20:40:53) [GET]
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` [0m
+Rendering template within layouts/users
+Rendering users/index
+  [4;35;1mUser Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 16ms (View: 8, DB: 1) | 200 OK [http://192.168.27.65/users]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#destroy (for 192.168.27.247 at 2011-01-17 20:40:54) [DELETE]
+  Parameters: {"authenticity_token"=>"QzE6VL6yFilEY8ZSUCmPP/tupszu+F2QYXfboJGSKjg=", "id"=>"6"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Destroy (0.3ms)[0m   [0mDELETE FROM `users` WHERE `id` = 6[0m
+  [4;36;1mSQL (28.2ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://192.168.27.65:3000/users
+Completed in 40ms (DB: 30) | 302 Found [http://192.168.27.65/users/6]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 192.168.27.247 at 2011-01-17 20:40:54) [GET]
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering template within layouts/users
+Rendering users/index
+  [4;36;1mUser Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 17ms (View: 7, DB: 1) | 200 OK [http://192.168.27.65/users]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#destroy (for 192.168.27.247 at 2011-01-17 20:40:56) [DELETE]
+  Parameters: {"authenticity_token"=>"QzE6VL6yFilEY8ZSUCmPP/tupszu+F2QYXfboJGSKjg=", "id"=>"8"}
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 8) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Destroy (0.3ms)[0m   [0;1mDELETE FROM `users` WHERE `id` = 8[0m
+  [4;35;1mSQL (25.7ms)[0m   [0mCOMMIT[0m
+Redirected to http://192.168.27.65:3000/users
+Completed in 38ms (DB: 28) | 302 Found [http://192.168.27.65/users/8]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 192.168.27.247 at 2011-01-17 20:40:56) [GET]
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 9ms (View: 2, DB: 0) | 200 OK [http://192.168.27.65/users]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 192.168.27.247 at 2011-01-17 20:41:07) [GET]
+  [4;35;1mUser Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/users
+Rendering users/new
+Completed in 15ms (View: 7, DB: 1) | 200 OK [http://192.168.27.65/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 192.168.27.247 at 2011-01-17 20:41:09) [GET]
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/users
+Rendering users/new
+Completed in 14ms (View: 6, DB: 1) | 200 OK [http://192.168.27.65/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 192.168.27.247 at 2011-01-17 20:41:20) [POST]
+  Parameters: {"user"=>{"name"=>"diycx"}, "commit"=>"Get Playlists", "authenticity_token"=>"QzE6VL6yFilEY8ZSUCmPP/tupszu+F2QYXfboJGSKjg="}
+  [4;35;1mUser Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` = 'diycx') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`name`, `updated_at`, `created_at`) VALUES('diycx', '2011-01-17 20:41:21', '2011-01-17 20:41:21')[0m
+  [4;35;1mSQL (31.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mPlaylist Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `playlists`[0m
+  [4;35;1mPlaylist Load (0.3ms)[0m   [0mSELECT * FROM `playlists` WHERE (`playlists`.`lastfm_id` = '8188917') AND (`playlists`.user_id = 9) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPlaylist Create (0.2ms)[0m   [0mINSERT INTO `playlists` (`name`, `updated_at`, `playlist_url`, `lastfm_id`, `user_id`, `created_at`) VALUES('Jazz', '2011-01-17 20:41:21', 'lastfm://playlist/8188917', 8188917, 9, '2011-01-17 20:41:21')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mPlaylist Load (0.3ms)[0m   [0mSELECT * FROM `playlists` WHERE (`playlists`.`lastfm_id` = '8185921') AND (`playlists`.user_id = 9) LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPlaylist Create (0.1ms)[0m   [0mINSERT INTO `playlists` (`name`, `updated_at`, `playlist_url`, `lastfm_id`, `user_id`, `created_at`) VALUES('dancy', '2011-01-17 20:41:21', 'lastfm://playlist/8185921', 8185921, 9, '2011-01-17 20:41:21')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mPlaylist Load (0.2ms)[0m   [0mSELECT * FROM `playlists` WHERE (`playlists`.`lastfm_id` = '7784975') AND (`playlists`.user_id = 9) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPlaylist Create (0.2ms)[0m   [0mINSERT INTO `playlists` (`name`, `updated_at`, `playlist_url`, `lastfm_id`, `user_id`, `created_at`) VALUES('beats', '2011-01-17 20:41:21', 'lastfm://playlist/7784975', 7784975, 9, '2011-01-17 20:41:21')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://192.168.27.65:3000/users/9
+Completed in 646ms (DB: 36) | 302 Found [http://192.168.27.65/users]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 192.168.27.247 at 2011-01-17 20:41:21) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mUser Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 9) [0m
+Rendering template within layouts/users
+Rendering users/show
+  [4;35;1mPlaylist Load (0.3ms)[0m   [0mSELECT * FROM `playlists` WHERE (`playlists`.user_id = 9) [0m
+  [4;36;1mPlaylist Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `playlists`[0m
+Completed in 19ms (View: 9, DB: 2) | 200 OK [http://192.168.27.65/users/9]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 192.168.27.247 at 2011-01-17 20:42:08) [POST]
+  Parameters: {"user"=>{"name"=>"namikonada"}, "commit"=>"Get Playlists", "authenticity_token"=>"QzE6VL6yFilEY8ZSUCmPP/tupszu+F2QYXfboJGSKjg="}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` = 'namikonada') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO `users` (`name`, `updated_at`, `created_at`) VALUES('namikonada', '2011-01-17 20:42:09', '2011-01-17 20:42:09')[0m
+  [4;35;1mSQL (16.2ms)[0m   [0mCOMMIT[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.[]):
+  app/controllers/users_controller.rb:61:in `create'
+
+Rendered rescues/_trace (36.1ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 192.168.27.247 at 2011-01-17 20:42:27) [POST]
+  Parameters: {"user"=>{"name"=>"namikonada"}, "commit"=>"Get Playlists", "authenticity_token"=>"QzE6VL6yFilEY8ZSUCmPP/tupszu+F2QYXfboJGSKjg="}
+  [4;36;1mUser Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` = 'namikonada') LIMIT 1[0m
+  [4;36;1mPlaylist Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `playlists`[0m
+  [4;35;1mPlaylist Load (0.2ms)[0m   [0mSELECT * FROM `playlists` WHERE (`playlists`.`lastfm_id` = '8142029') AND (`playlists`.user_id = 10) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPlaylist Create (0.2ms)[0m   [0mINSERT INTO `playlists` (`name`, `updated_at`, `playlist_url`, `lastfm_id`, `user_id`, `created_at`) VALUES('Jan Faves', '2011-01-17 20:42:28', 'lastfm://playlist/8142029', 8142029, 10, '2011-01-17 20:42:28')[0m
+  [4;36;1mSQL (24.6ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://192.168.27.65:3000/users/10
+Completed in 425ms (DB: 27) | 302 Found [http://192.168.27.65/users]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 192.168.27.247 at 2011-01-17 20:42:28) [GET]
+  Parameters: {"id"=>"10"}
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 10) [0m
+Rendering template within layouts/users
+Rendering users/show
+  [4;35;1mPlaylist Load (0.4ms)[0m   [0mSELECT * FROM `playlists` WHERE (`playlists`.user_id = 10) [0m
+  [4;36;1mPlaylist Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `playlists`[0m
+Completed in 21ms (View: 9, DB: 2) | 200 OK [http://192.168.27.65/users/10]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 192.168.27.247 at 2011-01-17 20:42:37) [POST]
+  Parameters: {"user"=>{"name"=>"sdf"}, "commit"=>"Get Playlists", "authenticity_token"=>"QzE6VL6yFilEY8ZSUCmPP/tupszu+F2QYXfboJGSKjg="}
+  [4;35;1mUser Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` = 'sdf') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`name`, `updated_at`, `created_at`) VALUES('sdf', '2011-01-17 20:42:37', '2011-01-17 20:42:37')[0m
+  [4;35;1mSQL (20.9ms)[0m   [0mCOMMIT[0m
+Redirected to http://192.168.27.65:3000
+Completed in 415ms (DB: 22) | 302 Found [http://192.168.27.65/users]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 192.168.27.247 at 2011-01-17 20:42:37) [GET]
+  [4;36;1mUser Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/users
+Rendering users/new
+Completed in 17ms (View: 8, DB: 1) | 200 OK [http://192.168.27.65/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 192.168.27.247 at 2011-01-17 20:42:42) [POST]
+  Parameters: {"user"=>{"name"=>"asf3445t"}, "commit"=>"Get Playlists", "authenticity_token"=>"QzE6VL6yFilEY8ZSUCmPP/tupszu+F2QYXfboJGSKjg="}
+Redirected to http://192.168.27.65:3000
+Completed in 386ms (DB: 0) | 302 Found [http://192.168.27.65/users]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 192.168.27.247 at 2011-01-17 20:42:43) [GET]
+  [4;35;1mUser Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/users
+Rendering users/new
+Completed in 15ms (View: 7, DB: 1) | 200 OK [http://192.168.27.65/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 192.168.27.247 at 2011-01-17 20:42:45) [GET]
+  [4;36;1mUser Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/users
+Rendering users/new
+Completed in 18ms (View: 8, DB: 3) | 200 OK [http://192.168.27.65/]
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` = 'namikonada') LIMIT 1[0m
+  [4;35;1mPlaylist Load (0.4ms)[0m   [0mSELECT * FROM `playlists` WHERE (`playlists`.`lastfm_id` = '8142029') AND (`playlists`.user_id = 10) LIMIT 1[0m
+  [4;36;1mPlaylist Load (0.1ms)[0m   [0;1mSELECT * FROM `playlists` WHERE (`playlists`.user_id = 10) [0m
+  [4;35;1mTrack Load (0.3ms)[0m   [0mSELECT * FROM `tracks` WHERE (`tracks`.playlist_id = 18) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 192.168.27.247 at 2011-01-17 21:23:46) [GET]
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/users
+Rendering users/new
+Completed in 15ms (View: 7, DB: 1) | 200 OK [http://192.168.27.65/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 192.168.27.247 at 2011-01-17 21:23:50) [POST]
+  Parameters: {"user"=>{"name"=>"diycx"}, "commit"=>"Get Playlists", "authenticity_token"=>"QzE6VL6yFilEY8ZSUCmPP/tupszu+F2QYXfboJGSKjg="}
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` = 'diycx') LIMIT 1[0m
+  [4;36;1mPlaylist Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `playlists`[0m
+  [4;35;1mPlaylist Load (0.1ms)[0m   [0mSELECT * FROM `playlists` WHERE (`playlists`.`lastfm_id` = '8188917') AND (`playlists`.user_id = 9) LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+
+NoMethodError (undefined method `tracks' for #<Class:0xb686c0ac>):
+  app/controllers/users_controller.rb:56:in `create'
+  app/controllers/users_controller.rb:55:in `each'
+  app/controllers/users_controller.rb:55:in `create'
+  app/controllers/users_controller.rb:51:in `each'
+  app/controllers/users_controller.rb:51:in `create'
+
+Rendered rescues/_trace (40.9ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 192.168.27.247 at 2011-01-17 21:29:10) [POST]
+  Parameters: {"user"=>{"name"=>"diycx"}, "commit"=>"Get Playlists", "authenticity_token"=>"QzE6VL6yFilEY8ZSUCmPP/tupszu+F2QYXfboJGSKjg="}
+  [4;35;1mUser Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` = 'diycx') LIMIT 1[0m
+  [4;35;1mPlaylist Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `playlists`[0m
+  [4;36;1mPlaylist Load (0.1ms)[0m   [0;1mSELECT * FROM `playlists` WHERE (`playlists`.`lastfm_id` = '8188917') AND (`playlists`.user_id = 9) LIMIT 1[0m
+  [4;35;1mTrack Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `tracks`[0m
+  [4;36;1mTrack Load (0.3ms)[0m   [0;1mSELECT * FROM `tracks` WHERE (`tracks`.`track_name` = 'Say It (Over And Over Again)' AND `tracks`.`artist_name` = 'John Coltrane Quartet') AND (`tracks`.playlist_id = 15) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mTrack Create (0.3ms)[0m   [0;1mINSERT INTO `tracks` (`playlist_id`, `updated_at`, `track_name`, `artist_name`, `lastfm_id`, `created_at`) VALUES(15, '2011-01-17 21:29:11', 'Say It (Over And Over Again)', 'John Coltrane Quartet', NULL, '2011-01-17 21:29:11')[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mTrack Load (0.3ms)[0m   [0;1mSELECT * FROM `tracks` WHERE (`tracks`.`track_name` = 'I Could Write A Book' AND `tracks`.`artist_name` = 'Miles Davis Quintet') AND (`tracks`.playlist_id = 15) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mTrack Create (0.2ms)[0m   [0;1mINSERT INTO `tracks` (`playlist_id`, `updated_at`, `track_name`, `artist_name`, `lastfm_id`, `created_at`) VALUES(15, '2011-01-17 21:29:11', 'I Could Write A Book', 'Miles Davis Quintet', NULL, '2011-01-17 21:29:11')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mTrack Load (0.2ms)[0m   [0;1mSELECT * FROM `tracks` WHERE (`tracks`.`track_name` = 'Santo' AND `tracks`.`artist_name` = 'Miguel Zenon') AND (`tracks`.playlist_id = 15) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mTrack Create (0.0ms)[0m   [0;1mINSERT INTO `tracks` (`playlist_id`, `updated_at`, `track_name`, `artist_name`, `lastfm_id`, `created_at`) VALUES(15, '2011-01-17 21:29:11', 'Santo', 'Miguel Zenon', NULL, '2011-01-17 21:29:11')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mPlaylist Load (0.2ms)[0m   [0;1mSELECT * FROM `playlists` WHERE (`playlists`.`lastfm_id` = '8185921') AND (`playlists`.user_id = 9) LIMIT 1[0m
+
+TypeError (can't convert String into Integer):
+  app/controllers/users_controller.rb:56:in `[]'
+  app/controllers/users_controller.rb:56:in `create'
+  app/controllers/users_controller.rb:55:in `each'
+  app/controllers/users_controller.rb:55:in `create'
+  app/controllers/users_controller.rb:51:in `each'
+  app/controllers/users_controller.rb:51:in `create'
+
+Rendered rescues/_trace (37.9ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mPlaylist Load (0.1ms)[0m   [0;1mSELECT * FROM `playlists` WHERE (`playlists`.`lastfm_id` = '8142029') AND (`playlists`.user_id = 10) LIMIT 1[0m
+  [4;35;1mTrack Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `tracks`[0m
+  [4;36;1mTrack Load (0.4ms)[0m   [0;1mSELECT * FROM `tracks` WHERE (`tracks`.`track_name` = 'New Flowers' AND `tracks`.`artist_name` = 'Tanlines') AND (`tracks`.playlist_id = 18) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mTrack Create (0.3ms)[0m   [0;1mINSERT INTO `tracks` (`playlist_id`, `updated_at`, `track_name`, `artist_name`, `lastfm_id`, `created_at`) VALUES(18, '2011-01-17 21:33:12', 'New Flowers', 'Tanlines', NULL, '2011-01-17 21:33:12')[0m
+  [4;35;1mSQL (7.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mTrack Load (0.3ms)[0m   [0;1mSELECT * FROM `tracks` WHERE (`tracks`.`track_name` = 'Take It Easy' AND `tracks`.`artist_name` = 'Surfer Blood') AND (`tracks`.playlist_id = 18) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mTrack Create (0.0ms)[0m   [0;1mINSERT INTO `tracks` (`playlist_id`, `updated_at`, `track_name`, `artist_name`, `lastfm_id`, `created_at`) VALUES(18, '2011-01-17 21:33:12', 'Take It Easy', 'Surfer Blood', NULL, '2011-01-17 21:33:12')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mTrack Load (0.2ms)[0m   [0;1mSELECT * FROM `tracks` WHERE (`tracks`.`track_name` = 'Lately (Deuxième)' AND `tracks`.`artist_name` = 'Memoryhouse') AND (`tracks`.playlist_id = 18) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mTrack Create (0.2ms)[0m   [0;1mINSERT INTO `tracks` (`playlist_id`, `updated_at`, `track_name`, `artist_name`, `lastfm_id`, `created_at`) VALUES(18, '2011-01-17 21:33:12', 'Lately (Deuxième)', 'Memoryhouse', NULL, '2011-01-17 21:33:12')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mTrack Load (0.2ms)[0m   [0;1mSELECT * FROM `tracks` WHERE (`tracks`.`track_name` = 'You do you' AND `tracks`.`artist_name` = 'Bear in Heaven') AND (`tracks`.playlist_id = 18) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mTrack Create (0.1ms)[0m   [0;1mINSERT INTO `tracks` (`playlist_id`, `updated_at`, `track_name`, `artist_name`, `lastfm_id`, `created_at`) VALUES(18, '2011-01-17 21:33:12', 'You do you', 'Bear in Heaven', NULL, '2011-01-17 21:33:12')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mTrack Load (0.9ms)[0m   [0;1mSELECT * FROM `tracks` WHERE (`tracks`.`track_name` = 'Collector' AND `tracks`.`artist_name` = 'Here We Go Magic') AND (`tracks`.playlist_id = 18) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mTrack Create (0.1ms)[0m   [0;1mINSERT INTO `tracks` (`playlist_id`, `updated_at`, `track_name`, `artist_name`, `lastfm_id`, `created_at`) VALUES(18, '2011-01-17 21:33:12', 'Collector', 'Here We Go Magic', NULL, '2011-01-17 21:33:12')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mTrack Load (0.0ms)[0m   [0;1mSELECT * FROM `tracks` WHERE (`tracks`.`track_name` = 'Mien' AND `tracks`.`artist_name` = 'MillionYoung') AND (`tracks`.playlist_id = 18) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mTrack Create (0.3ms)[0m   [0;1mINSERT INTO `tracks` (`playlist_id`, `updated_at`, `track_name`, `artist_name`, `lastfm_id`, `created_at`) VALUES(18, '2011-01-17 21:33:12', 'Mien', 'MillionYoung', NULL, '2011-01-17 21:33:12')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mTrack Load (0.7ms)[0m   [0;1mSELECT * FROM `tracks` WHERE (`tracks`.`track_name` = 'New Theory' AND `tracks`.`artist_name` = 'Washed Out') AND (`tracks`.playlist_id = 18) LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mTrack Create (0.2ms)[0m   [0;1mINSERT INTO `tracks` (`playlist_id`, `updated_at`, `track_name`, `artist_name`, `lastfm_id`, `created_at`) VALUES(18, '2011-01-17 21:33:12', 'New Theory', 'Washed Out', NULL, '2011-01-17 21:33:12')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mTrack Load (0.2ms)[0m   [0;1mSELECT * FROM `tracks` WHERE (`tracks`.`track_name` = 'Real Life' AND `tracks`.`artist_name` = 'Tanlines') AND (`tracks`.playlist_id = 18) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mTrack Create (0.1ms)[0m   [0;1mINSERT INTO `tracks` (`playlist_id`, `updated_at`, `track_name`, `artist_name`, `lastfm_id`, `created_at`) VALUES(18, '2011-01-17 21:33:12', 'Real Life', 'Tanlines', NULL, '2011-01-17 21:33:12')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mTrack Load (0.2ms)[0m   [0;1mSELECT * FROM `tracks` WHERE (`tracks`.`track_name` = 'Heartbeat' AND `tracks`.`artist_name` = 'Blackbird Blackbird') AND (`tracks`.playlist_id = 18) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mTrack Create (0.3ms)[0m   [0;1mINSERT INTO `tracks` (`playlist_id`, `updated_at`, `track_name`, `artist_name`, `lastfm_id`, `created_at`) VALUES(18, '2011-01-17 21:33:12', 'Heartbeat', 'Blackbird Blackbird', NULL, '2011-01-17 21:33:12')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mTrack Load (0.3ms)[0m   [0;1mSELECT * FROM `tracks` WHERE (`tracks`.`track_name` = 'Slow' AND `tracks`.`artist_name` = 'Twin Shadow') AND (`tracks`.playlist_id = 18) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mTrack Create (0.1ms)[0m   [0;1mINSERT INTO `tracks` (`playlist_id`, `updated_at`, `track_name`, `artist_name`, `lastfm_id`, `created_at`) VALUES(18, '2011-01-17 21:33:12', 'Slow', 'Twin Shadow', NULL, '2011-01-17 21:33:12')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mTrack Load (0.2ms)[0m   [0;1mSELECT * FROM `tracks` WHERE (`tracks`.`track_name` = 'Isabella of Castile' AND `tracks`.`artist_name` = 'Starfucker') AND (`tracks`.playlist_id = 18) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mTrack Create (0.1ms)[0m   [0;1mINSERT INTO `tracks` (`playlist_id`, `updated_at`, `track_name`, `artist_name`, `lastfm_id`, `created_at`) VALUES(18, '2011-01-17 21:33:12', 'Isabella of Castile', 'Starfucker', NULL, '2011-01-17 21:33:12')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mTrack Load (0.2ms)[0m   [0;1mSELECT * FROM `tracks` WHERE (`tracks`.`track_name` = 'You\'ll See It' AND `tracks`.`artist_name` = 'Washed Out') AND (`tracks`.playlist_id = 18) LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mTrack Create (0.1ms)[0m   [0;1mINSERT INTO `tracks` (`playlist_id`, `updated_at`, `track_name`, `artist_name`, `lastfm_id`, `created_at`) VALUES(18, '2011-01-17 21:33:12', 'You\'ll See It', 'Washed Out', NULL, '2011-01-17 21:33:12')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mTrack Load (0.4ms)[0m   [0;1mSELECT * FROM `tracks` WHERE (`tracks`.`track_name` = 'New Flowers' AND `tracks`.`artist_name` = 'Tanlines') AND (`tracks`.playlist_id = 18) LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` = 'diycx') LIMIT 1[0m
+  [4;36;1mPlaylist Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `playlists`[0m
+  [4;35;1mPlaylist Load (0.1ms)[0m   [0mSELECT * FROM `playlists` WHERE (`playlists`.`lastfm_id` = '8188917') AND (`playlists`.user_id = 9) LIMIT 1[0m
+  [4;36;1mTrack Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `tracks`[0m
+  [4;35;1mTrack Load (0.4ms)[0m   [0mSELECT * FROM `tracks` WHERE (`tracks`.`track_name` = 'Say It (Over And Over Again)' AND `tracks`.`artist_name` = 'John Coltrane Quartet') AND (`tracks`.playlist_id = 15) LIMIT 1[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 9) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 192.168.27.247 at 2011-01-17 21:48:15) [POST]
+  Parameters: {"user"=>{"name"=>"diycx"}, "commit"=>"Get Playlists", "authenticity_token"=>"QzE6VL6yFilEY8ZSUCmPP/tupszu+F2QYXfboJGSKjg="}
+  [4;35;1mUser Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` = 'diycx') LIMIT 1[0m
+  [4;35;1mPlaylist Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `playlists`[0m
+  [4;36;1mPlaylist Load (0.3ms)[0m   [0;1mSELECT * FROM `playlists` WHERE (`playlists`.`lastfm_id` = '8188917') AND (`playlists`.user_id = 9) LIMIT 1[0m
+  [4;35;1mTrack Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `tracks`[0m
+  [4;36;1mTrack Load (0.0ms)[0m   [0;1mSELECT * FROM `tracks` WHERE (`tracks`.`track_name` = 'Say It (Over And Over Again)' AND `tracks`.`artist_name` = 'John Coltrane Quartet') AND (`tracks`.playlist_id = 15) LIMIT 1[0m
+  [4;35;1mTrack Load (0.3ms)[0m   [0mSELECT * FROM `tracks` WHERE (`tracks`.`track_name` = 'I Could Write A Book' AND `tracks`.`artist_name` = 'Miles Davis Quintet') AND (`tracks`.playlist_id = 15) LIMIT 1[0m
+  [4;36;1mTrack Load (0.2ms)[0m   [0;1mSELECT * FROM `tracks` WHERE (`tracks`.`track_name` = 'Santo' AND `tracks`.`artist_name` = 'Miguel Zenon') AND (`tracks`.playlist_id = 15) LIMIT 1[0m
+  [4;35;1mPlaylist Load (0.1ms)[0m   [0mSELECT * FROM `playlists` WHERE (`playlists`.`lastfm_id` = '8185921') AND (`playlists`.user_id = 9) LIMIT 1[0m
+
+TypeError (can't convert String into Integer):
+  app/controllers/users_controller.rb:56:in `[]'
+  app/controllers/users_controller.rb:56:in `create'
+  app/controllers/users_controller.rb:55:in `each'
+  app/controllers/users_controller.rb:55:in `create'
+  app/controllers/users_controller.rb:51:in `each'
+  app/controllers/users_controller.rb:51:in `create'
+
+Rendered rescues/_trace (36.0ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 192.168.27.247 at 2011-01-17 21:49:08) [POST]
+  Parameters: {"user"=>{"name"=>"namikonada"}, "commit"=>"Get Playlists", "authenticity_token"=>"QzE6VL6yFilEY8ZSUCmPP/tupszu+F2QYXfboJGSKjg="}
+  [4;36;1mUser Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` = 'namikonada') LIMIT 1[0m
+  [4;36;1mPlaylist Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `playlists`[0m
+  [4;35;1mPlaylist Load (0.1ms)[0m   [0mSELECT * FROM `playlists` WHERE (`playlists`.`lastfm_id` = '8142029') AND (`playlists`.user_id = 10) LIMIT 1[0m
+  [4;36;1mTrack Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `tracks`[0m
+  [4;35;1mTrack Load (0.1ms)[0m   [0mSELECT * FROM `tracks` WHERE (`tracks`.`track_name` = 'New Flowers' AND `tracks`.`artist_name` = 'Tanlines') AND (`tracks`.playlist_id = 18) LIMIT 1[0m
+  [4;36;1mTrack Load (0.3ms)[0m   [0;1mSELECT * FROM `tracks` WHERE (`tracks`.`track_name` = 'Take It Easy' AND `tracks`.`artist_name` = 'Surfer Blood') AND (`tracks`.playlist_id = 18) LIMIT 1[0m
+  [4;35;1mTrack Load (0.2ms)[0m   [0mSELECT * FROM `tracks` WHERE (`tracks`.`track_name` = 'Lately (Deuxième)' AND `tracks`.`artist_name` = 'Memoryhouse') AND (`tracks`.playlist_id = 18) LIMIT 1[0m
+  [4;36;1mTrack Load (0.2ms)[0m   [0;1mSELECT * FROM `tracks` WHERE (`tracks`.`track_name` = 'You do you' AND `tracks`.`artist_name` = 'Bear in Heaven') AND (`tracks`.playlist_id = 18) LIMIT 1[0m
+  [4;35;1mTrack Load (0.2ms)[0m   [0mSELECT * FROM `tracks` WHERE (`tracks`.`track_name` = 'Collector' AND `tracks`.`artist_name` = 'Here We Go Magic') AND (`tracks`.playlist_id = 18) LIMIT 1[0m
+  [4;36;1mTrack Load (0.2ms)[0m   [0;1mSELECT * FROM `tracks` WHERE (`tracks`.`track_name` = 'Mien' AND `tracks`.`artist_name` = 'MillionYoung') AND (`tracks`.playlist_id = 18) LIMIT 1[0m
+  [4;35;1mTrack Load (0.2ms)[0m   [0mSELECT * FROM `tracks` WHERE (`tracks`.`track_name` = 'New Theory' AND `tracks`.`artist_name` = 'Washed Out') AND (`tracks`.playlist_id = 18) LIMIT 1[0m
+  [4;36;1mTrack Load (0.6ms)[0m   [0;1mSELECT * FROM `tracks` WHERE (`tracks`.`track_name` = 'Real Life' AND `tracks`.`artist_name` = 'Tanlines') AND (`tracks`.playlist_id = 18) LIMIT 1[0m
+  [4;35;1mTrack Load (0.3ms)[0m   [0mSELECT * FROM `tracks` WHERE (`tracks`.`track_name` = 'Heartbeat' AND `tracks`.`artist_name` = 'Blackbird Blackbird') AND (`tracks`.playlist_id = 18) LIMIT 1[0m
+  [4;36;1mTrack Load (0.2ms)[0m   [0;1mSELECT * FROM `tracks` WHERE (`tracks`.`track_name` = 'Slow' AND `tracks`.`artist_name` = 'Twin Shadow') AND (`tracks`.playlist_id = 18) LIMIT 1[0m
+  [4;35;1mTrack Load (0.2ms)[0m   [0mSELECT * FROM `tracks` WHERE (`tracks`.`track_name` = 'Isabella of Castile' AND `tracks`.`artist_name` = 'Starfucker') AND (`tracks`.playlist_id = 18) LIMIT 1[0m
+  [4;36;1mTrack Load (0.2ms)[0m   [0;1mSELECT * FROM `tracks` WHERE (`tracks`.`track_name` = 'You\'ll See It' AND `tracks`.`artist_name` = 'Washed Out') AND (`tracks`.playlist_id = 18) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `tracks` WHERE (`tracks`.`track_name` = 'New Flowers' AND `tracks`.`artist_name` = 'Tanlines') AND (`tracks`.playlist_id = 18) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `tracks` WHERE (`tracks`.`track_name` = 'Take It Easy' AND `tracks`.`artist_name` = 'Surfer Blood') AND (`tracks`.playlist_id = 18) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `tracks` WHERE (`tracks`.`track_name` = 'Lately (Deuxième)' AND `tracks`.`artist_name` = 'Memoryhouse') AND (`tracks`.playlist_id = 18) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `tracks` WHERE (`tracks`.`track_name` = 'You do you' AND `tracks`.`artist_name` = 'Bear in Heaven') AND (`tracks`.playlist_id = 18) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `tracks` WHERE (`tracks`.`track_name` = 'Collector' AND `tracks`.`artist_name` = 'Here We Go Magic') AND (`tracks`.playlist_id = 18) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `tracks` WHERE (`tracks`.`track_name` = 'Mien' AND `tracks`.`artist_name` = 'MillionYoung') AND (`tracks`.playlist_id = 18) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `tracks` WHERE (`tracks`.`track_name` = 'New Theory' AND `tracks`.`artist_name` = 'Washed Out') AND (`tracks`.playlist_id = 18) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `tracks` WHERE (`tracks`.`track_name` = 'Real Life' AND `tracks`.`artist_name` = 'Tanlines') AND (`tracks`.playlist_id = 18) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `tracks` WHERE (`tracks`.`track_name` = 'Heartbeat' AND `tracks`.`artist_name` = 'Blackbird Blackbird') AND (`tracks`.playlist_id = 18) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `tracks` WHERE (`tracks`.`track_name` = 'Slow' AND `tracks`.`artist_name` = 'Twin Shadow') AND (`tracks`.playlist_id = 18) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `tracks` WHERE (`tracks`.`track_name` = 'Isabella of Castile' AND `tracks`.`artist_name` = 'Starfucker') AND (`tracks`.playlist_id = 18) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `tracks` WHERE (`tracks`.`track_name` = 'You\'ll See It' AND `tracks`.`artist_name` = 'Washed Out') AND (`tracks`.playlist_id = 18) LIMIT 1[0m
+Redirected to http://192.168.27.65:3000/users/10
+Completed in 948ms (DB: 6) | 302 Found [http://192.168.27.65/users]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 192.168.27.247 at 2011-01-17 21:49:09) [GET]
+  Parameters: {"id"=>"10"}
+  [4;35;1mUser Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 10) [0m
+Rendering template within layouts/users
+Rendering users/show
+  [4;35;1mPlaylist Load (0.3ms)[0m   [0mSELECT * FROM `playlists` WHERE (`playlists`.user_id = 10) [0m
+  [4;36;1mPlaylist Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `playlists`[0m
+Completed in 19ms (View: 9, DB: 2) | 200 OK [http://192.168.27.65/users/10]
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 9) [0m
+  [4;36;1mPlaylist Load (0.5ms)[0m   [0;1mSELECT * FROM `playlists` WHERE (`playlists`.user_id = 9) LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 9) [0m
+  [4;36;1mPlaylist Load (0.1ms)[0m   [0;1mSELECT * FROM `playlists` WHERE (`playlists`.user_id = 9) LIMIT 1[0m
+  [4;35;1mTrack Load (0.3ms)[0m   [0mSELECT * FROM `tracks` WHERE (`tracks`.playlist_id = 15) [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 10) [0m
+  [4;35;1mPlaylist Load (0.3ms)[0m   [0mSELECT * FROM `playlists` WHERE (`playlists`.user_id = 10) LIMIT 1[0m
+  [4;36;1mTrack Load (0.2ms)[0m   [0;1mSELECT * FROM `tracks` WHERE (`tracks`.playlist_id = 18) [0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 9) [0m
+  [4;36;1mPlaylist Load (0.1ms)[0m   [0;1mSELECT * FROM `playlists` WHERE (`playlists`.user_id = 9) LIMIT 1[0m
+  [4;35;1mTrack Load (0.1ms)[0m   [0mSELECT * FROM `tracks` WHERE (`tracks`.playlist_id = 15) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 192.168.27.247 at 2011-01-17 21:58:38) [GET]
+  [4;35;1mUser Load (1.2ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering template within layouts/users
+Rendering users/index
+  [4;36;1mUser Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 19ms (View: 11, DB: 2) | 200 OK [http://192.168.27.65/users/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#destroy (for 192.168.27.247 at 2011-01-17 21:58:49) [DELETE]
+  Parameters: {"authenticity_token"=>"QzE6VL6yFilEY8ZSUCmPP/tupszu+F2QYXfboJGSKjg=", "id"=>"9"}
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 9) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Destroy (0.2ms)[0m   [0;1mDELETE FROM `users` WHERE `id` = 9[0m
+  [4;35;1mSQL (5.5ms)[0m   [0mCOMMIT[0m
+Redirected to http://192.168.27.65:3000/users
+Completed in 16ms (DB: 7) | 302 Found [http://192.168.27.65/users/9]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 192.168.27.247 at 2011-01-17 21:58:49) [GET]
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM `users` [0m
+Rendering template within layouts/users
+Rendering users/index
+  [4;35;1mUser Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 16ms (View: 8, DB: 1) | 200 OK [http://192.168.27.65/users]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#destroy (for 192.168.27.247 at 2011-01-17 21:58:51) [DELETE]
+  Parameters: {"authenticity_token"=>"QzE6VL6yFilEY8ZSUCmPP/tupszu+F2QYXfboJGSKjg=", "id"=>"10"}
+  [4;36;1mUser Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 10) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Destroy (0.2ms)[0m   [0mDELETE FROM `users` WHERE `id` = 10[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://192.168.27.65:3000/users
+Completed in 12ms (DB: 3) | 302 Found [http://192.168.27.65/users/10]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 192.168.27.247 at 2011-01-17 21:58:52) [GET]
+  [4;35;1mUser Load (2.3ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering template within layouts/users
+Rendering users/index
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 13ms (View: 5, DB: 4) | 200 OK [http://192.168.27.65/users]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#destroy (for 192.168.27.247 at 2011-01-17 21:58:53) [DELETE]
+  Parameters: {"authenticity_token"=>"QzE6VL6yFilEY8ZSUCmPP/tupszu+F2QYXfboJGSKjg=", "id"=>"11"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 11) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Destroy (0.2ms)[0m   [0;1mDELETE FROM `users` WHERE `id` = 11[0m
+  [4;35;1mSQL (29.4ms)[0m   [0mCOMMIT[0m
+Redirected to http://192.168.27.65:3000/users
+Completed in 43ms (DB: 31) | 302 Found [http://192.168.27.65/users/11]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 192.168.27.247 at 2011-01-17 21:58:54) [GET]
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM `users` [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 11ms (View: 3, DB: 1) | 200 OK [http://192.168.27.65/users]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 192.168.27.247 at 2011-01-17 21:59:01) [GET]
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/users
+Rendering users/new
+Completed in 14ms (View: 7, DB: 1) | 200 OK [http://192.168.27.65/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 192.168.27.247 at 2011-01-17 21:59:14) [POST]
+  Parameters: {"user"=>{"name"=>"diycx"}, "commit"=>"Get Playlists", "authenticity_token"=>"QzE6VL6yFilEY8ZSUCmPP/tupszu+F2QYXfboJGSKjg="}
+  [4;36;1mUser Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` = 'diycx') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`name`, `updated_at`, `created_at`) VALUES('diycx', '2011-01-17 21:59:14', '2011-01-17 21:59:14')[0m
+  [4;36;1mSQL (3.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mPlaylist Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `playlists`[0m
+  [4;36;1mPlaylist Load (0.3ms)[0m   [0;1mSELECT * FROM `playlists` WHERE (`playlists`.`lastfm_id` = '8188917') AND (`playlists`.user_id = 12) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPlaylist Create (0.3ms)[0m   [0;1mINSERT INTO `playlists` (`name`, `updated_at`, `playlist_url`, `lastfm_id`, `user_id`, `created_at`) VALUES('Jazz', '2011-01-17 21:59:14', 'lastfm://playlist/8188917', 8188917, 12, '2011-01-17 21:59:14')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mTrack Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `tracks`[0m
+  [4;35;1mTrack Load (0.4ms)[0m   [0mSELECT * FROM `tracks` WHERE (`tracks`.`track_name` = 'Say It (Over And Over Again)' AND `tracks`.`artist_name` = 'John Coltrane Quartet') AND (`tracks`.playlist_id = 19) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTrack Create (0.4ms)[0m   [0mINSERT INTO `tracks` (`playlist_id`, `updated_at`, `track_name`, `artist_name`, `lastfm_id`, `created_at`) VALUES(19, '2011-01-17 21:59:15', 'Say It (Over And Over Again)', 'John Coltrane Quartet', NULL, '2011-01-17 21:59:15')[0m
+  [4;36;1mSQL (19.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mTrack Load (0.4ms)[0m   [0mSELECT * FROM `tracks` WHERE (`tracks`.`track_name` = 'I Could Write A Book' AND `tracks`.`artist_name` = 'Miles Davis Quintet') AND (`tracks`.playlist_id = 19) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTrack Create (0.2ms)[0m   [0mINSERT INTO `tracks` (`playlist_id`, `updated_at`, `track_name`, `artist_name`, `lastfm_id`, `created_at`) VALUES(19, '2011-01-17 21:59:15', 'I Could Write A Book', 'Miles Davis Quintet', NULL, '2011-01-17 21:59:15')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mTrack Load (0.3ms)[0m   [0mSELECT * FROM `tracks` WHERE (`tracks`.`track_name` = 'Santo' AND `tracks`.`artist_name` = 'Miguel Zenon') AND (`tracks`.playlist_id = 19) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTrack Create (0.2ms)[0m   [0mINSERT INTO `tracks` (`playlist_id`, `updated_at`, `track_name`, `artist_name`, `lastfm_id`, `created_at`) VALUES(19, '2011-01-17 21:59:15', 'Santo', 'Miguel Zenon', NULL, '2011-01-17 21:59:15')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mPlaylist Load (0.5ms)[0m   [0mSELECT * FROM `playlists` WHERE (`playlists`.`lastfm_id` = '8185921') AND (`playlists`.user_id = 12) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPlaylist Create (0.4ms)[0m   [0mINSERT INTO `playlists` (`name`, `updated_at`, `playlist_url`, `lastfm_id`, `user_id`, `created_at`) VALUES('dancy', '2011-01-17 21:59:15', 'lastfm://playlist/8185921', 8185921, 12, '2011-01-17 21:59:15')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+
+TypeError (can't convert String into Integer):
+  app/controllers/users_controller.rb:56:in `[]'
+  app/controllers/users_controller.rb:56:in `create'
+  app/controllers/users_controller.rb:55:in `each'
+  app/controllers/users_controller.rb:55:in `create'
+  app/controllers/users_controller.rb:51:in `each'
+  app/controllers/users_controller.rb:51:in `create'
+
+Rendered rescues/_trace (37.1ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)

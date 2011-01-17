@@ -40,29 +40,36 @@ class UsersController < ApplicationController
     LastFM.client_name = "gigkong"
     
     #check if user exists and get playlists
-    @p = LastFM::User.get_playlists(:user => params[:user][:name])
-    if @p["error"] == 6
+    @playlists = LastFM::User.get_playlists(:user => params[:user][:name])
+    if @playlists["error"] == 6
       #*****get this working***********
       redirect_to("http://192.168.27.65:3000", :notice => 'We couldnt find that Username. Try again!')
     else
       @u = User.find_or_create_by_name(params[:user][:name])
       
-      if @p["playlists"]["playlist"].respond_to?("first")
-        @p["playlists"]["playlist"].each do |p|
+      if @playlists["playlists"]["playlist"].respond_to?("first")
+        @playlists["playlists"]["playlist"].each do |p|
           url = "lastfm://playlist/" << p["id"]
-          @u.playlists.find_or_create_by_lastfm_id(:lastfm_id => p["id"], :name => p["title"], :playlist_url => url) 
-          LastFM::Playlist.fetch(:playlistURL => "lastfm://playlist/8188917")
+          @newp = @u.playlists.find_or_create_by_lastfm_id(:lastfm_id => p["id"], :name => p["title"], :playlist_url => url) 
+          @tracklist = LastFM::Playlist.fetch(:playlistURL => url)["playlist"]["trackList"]["track"]
+          @tracklist.each do |t|
+            @newp.tracks.find_or_create_by_track_name_and_artist_name(:track_name => t["title"], :artist_name => t["creator"])
+          end
         end
   
-      elsif @p.has_key?("playlists")
-        if @p["playlists"].has_key?("user")
+      elsif @playlists.has_key?("playlists")
+        if @playlists["playlists"].has_key?("user")
           redirect_to("http://192.168.27.65:3000", :notice => 'This user does not have any Last.fm playlists') and return
-        elsif @p["playlists"]["playlist"].has_key?("title")
-          url = "lastfm://playlist/" << @p["playlists"]["playlist"]["id"]
-          @u.playlists.find_or_create_by_lastfm_id(:lastfm_id => @p["playlists"]["playlist"]["id"], :name => @p["playlists"]["playlist"]["title"], :playlist_url => url)
-       
+        elsif @playlists["playlists"]["playlist"].has_key?("title")
+          url = "lastfm://playlist/" << @playlists["playlists"]["playlist"]["id"]
+          @newp = @u.playlists.find_or_create_by_lastfm_id(:lastfm_id => @playlists["playlists"]["playlist"]["id"], :name => @playlists["playlists"]["playlist"]["title"], :playlist_url => url)
+          @tracklist = LastFM::Playlist.fetch(:playlistURL => url)["playlist"]["trackList"]["track"]
+          @tracklist.each do |t|
+            @newp.tracks.find_or_create_by_track_name_and_artist_name(:track_name => t["title"], :artist_name => t["creator"])
+          end
         end
-        
+        @tracklist.each do |t| @newp.tracks.find_or_create_by_track_name_and_artist_name(:track_name => t["title"], :artist_name => t["creator"]) end
+          
         
         
         #@np = @u.playlists.build(:name => @p["playlists"]["playlist"]["title"], :lastfm_id => @p["playlists"]["playlist"]["id"])  
