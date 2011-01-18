@@ -54,9 +54,11 @@ class UsersController < ApplicationController
           @newp = @u.playlists.find_or_create_by_lastfm_id(:lastfm_id => p["id"], :name => p["title"], :playlist_url => url) 
           @tracklist = LastFM::Playlist.fetch(:playlistURL => url)["playlist"]["trackList"]["track"]
           @tracklist.each do |t|
-            track_search_name = t["creator"] << " " << t["title"] 
-            yt_url = ytclient.videos_by(:query => track_search_name, :max_results => 1, :format => 5, :category => 'music') 
-            @newp.tracks.find_or_create_by_track_name_and_artist_name(:track_name => t["title"], :artist_name => t["creator"], :yt_url => yt_url)
+            track_search_name = t["creator"] + " " + t["title"]  
+            ytreply = ytclient.videos_by(:query => track_search_name, :max_results => 1, :format => 5, :category => 'music') 
+            if ytreply.videos != []
+              @newp.tracks.find_or_create_by_track_name_and_artist_name(:track_name => t["title"], :artist_name => t["creator"], :yt_url => ytreply.videos.first.embed_url)
+            end
           end
         end
   
@@ -68,9 +70,11 @@ class UsersController < ApplicationController
           @newp = @u.playlists.find_or_create_by_lastfm_id(:lastfm_id => @playlists["playlists"]["playlist"]["id"], :name => @playlists["playlists"]["playlist"]["title"], :playlist_url => url)
           @tracklist = LastFM::Playlist.fetch(:playlistURL => url)["playlist"]["trackList"]["track"]
           @tracklist.each do |t|
-            track_search_name = t["creator"] << " " << t["title"] 
-            ytreply = ytclient.videos_by(:query => track_search_name, :max_results => 1, :format => 5, :category => 'music') 
-            @newp.tracks.find_or_create_by_track_name_and_artist_name(:track_name => t["title"], :artist_name => t["creator"], :yt_url => ytreply.videos.first.embed_url)
+            track_search_name = t["creator"] + " " + t["title"]  
+            ytreply = ytclient.videos_by(:query => track_search_name, :max_results => 1, :format => 5, :category => 'music')
+            if ytreply.videos != []
+              @newp.tracks.find_or_create_by_track_name_and_artist_name(:track_name => t["title"], :artist_name => t["creator"], :yt_url => ytreply.videos.first.embed_url)
+            end
           end
         end
               
