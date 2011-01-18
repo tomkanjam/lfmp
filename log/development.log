@@ -9975,3 +9975,614 @@ Rendering users/show
   [4;35;1mPlaylist Load (0.8ms)[0m   [0mSELECT * FROM `playlists` WHERE (`playlists`.user_id = 23) [0m
   [4;36;1mPlaylist Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `playlists`[0m
 Completed in 19ms (View: 9, DB: 3) | 200 OK [http://192.168.27.65/users/23]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 192.168.27.247 at 2011-01-18 18:12:57) [GET]
+  Parameters: {"id"=>"23"}
+  [4;35;1mUser Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 23) [0m
+Rendering template within layouts/users
+Rendering users/show
+  [4;35;1mPlaylist Load (0.1ms)[0m   [0mSELECT * FROM `playlists` WHERE (`playlists`.user_id = 23) [0m
+  [4;36;1mPlaylist Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `playlists`[0m
+
+ActionView::TemplateError (Missing layout layouts/_stylesheets.erb in view path app/views) on line #10 of app/views/layouts/users.html.erb:
+7:   <title>Users: <%= controller.action_name %></title>
+8:   <%= stylesheet_link_tag 'scaffold' %>
+9:   <%= stylesheet_link_tag 'prettyPhoto' %>
+10:   <%= render 'layouts/stylesheets' %>
+11:   <%= javascript_include_tag 'jquery', 'jquery.prettyPhoto'%> 
+12:   <script type="text/javascript">  
+13: </head>
+
+    app/views/layouts/users.html.erb:10
+    app/controllers/users_controller.rb:21:in `show'
+
+Rendered rescues/_trace (51.1ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 192.168.27.247 at 2011-01-18 18:13:27) [GET]
+  Parameters: {"id"=>"23"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 23) [0m
+Rendering template within layouts/users
+Rendering users/show
+  [4;35;1mPlaylist Load (0.0ms)[0m   [0mSELECT * FROM `playlists` WHERE (`playlists`.user_id = 23) [0m
+  [4;36;1mPlaylist Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `playlists`[0m
+Completed in 24ms (View: 15, DB: 2) | 200 OK [http://192.168.27.65/users/23]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 192.168.27.247 at 2011-01-18 18:13:31) [GET]
+  Parameters: {"id"=>"23"}
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 23) [0m
+Rendering template within layouts/users
+Rendering users/show
+  [4;35;1mPlaylist Load (0.1ms)[0m   [0mSELECT * FROM `playlists` WHERE (`playlists`.user_id = 23) [0m
+  [4;36;1mPlaylist Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `playlists`[0m
+Completed in 23ms (View: 12, DB: 2) | 200 OK [http://192.168.27.65/users/23]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 192.168.27.247 at 2011-01-18 18:13:34) [GET]
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering template within layouts/users
+Rendering users/index
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 15ms (View: 6, DB: 1) | 200 OK [http://192.168.27.65/users]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.27.247 at 2011-01-18 18:14:24) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/1295372639" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.27.247 at 2011-01-18 18:14:26) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/1295372609" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.27.247 at 2011-01-18 18:14:34) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/1295372639" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.27.247 at 2011-01-18 18:14:36) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/1295372609" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 192.168.27.247 at 2011-01-18 18:16:03) [GET]
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering template within layouts/users
+Rendering users/index
+  [4;36;1mUser Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 18ms (View: 11, DB: 1) | 200 OK [http://192.168.27.65/users]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 192.168.27.247 at 2011-01-18 18:23:34) [GET]
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering template within layouts/users
+Rendering users/index
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 13ms (View: 5, DB: 2) | 200 OK [http://192.168.27.65/users]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 192.168.27.247 at 2011-01-18 18:23:37) [GET]
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering template within layouts/users
+Rendering users/index
+  [4;36;1mUser Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 14ms (View: 6, DB: 1) | 200 OK [http://192.168.27.65/users]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 192.168.27.247 at 2011-01-18 18:24:33) [GET]
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering template within layouts/users
+Rendering users/index
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 70ms (View: 10, DB: 1) | 200 OK [http://192.168.27.65/users]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 192.168.27.247 at 2011-01-18 18:25:17) [GET]
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering template within layouts/users
+Rendering users/index
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 19ms (View: 10, DB: 1) | 200 OK [http://192.168.27.65/users]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 192.168.27.247 at 2011-01-18 18:25:58) [GET]
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering template within layouts/users
+Rendering users/index
+  [4;36;1mUser Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 19ms (View: 11, DB: 1) | 200 OK [http://192.168.27.65/users]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 192.168.27.247 at 2011-01-18 18:26:00) [GET]
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering template within layouts/users
+Rendering users/index
+  [4;36;1mUser Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 14ms (View: 6, DB: 1) | 200 OK [http://192.168.27.65/users]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 192.168.27.247 at 2011-01-18 18:26:46) [GET]
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering template within layouts/users
+Rendering users/index
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 19ms (View: 10, DB: 1) | 200 OK [http://192.168.27.65/users]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.27.247 at 2011-01-18 18:26:51) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/1295372639" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.27.247 at 2011-01-18 18:26:54) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/1295372609" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.27.247 at 2011-01-18 18:26:55) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/1295372639" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 192.168.27.247 at 2011-01-18 18:27:14) [GET]
+  Parameters: {"id"=>"23"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 23) [0m
+Rendering template within layouts/users
+Rendering users/show
+  [4;35;1mPlaylist Load (0.1ms)[0m   [0mSELECT * FROM `playlists` WHERE (`playlists`.user_id = 23) [0m
+  [4;36;1mPlaylist Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `playlists`[0m
+Completed in 20ms (View: 11, DB: 2) | 200 OK [http://192.168.27.65/users/23]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.27.247 at 2011-01-18 18:30:48) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/1295372639" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.27.247 at 2011-01-18 18:32:02) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/1295372609" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.27.247 at 2011-01-18 18:32:05) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/1295372639" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 192.168.27.247 at 2011-01-18 19:16:44) [GET]
+  Parameters: {"id"=>"23"}
+  [4;35;1mUser Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 23) [0m
+Rendering template within layouts/users
+Rendering users/show
+  [4;35;1mPlaylist Load (0.3ms)[0m   [0mSELECT * FROM `playlists` WHERE (`playlists`.user_id = 23) [0m
+  [4;36;1mPlaylist Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `playlists`[0m
+
+ActionView::TemplateError (undefined method `track' for #<Playlist:0xb6939da4>) on line #13 of app/views/users/show.html.erb:
+10: 
+11: <% @user.playlists.each do |playlist| %>
+12:   <tr>
+13:     <a href="<%= playlist.track.first.yt_url %>" rel="prettyPhoto[<%= playlist.id %>]">
+14:       <td><%=h playlist.name %></td>
+15:     </a>
+16:     <% playlist.tracks.each do |track| %>
+
+    app/views/users/show.html.erb:13
+    app/views/users/show.html.erb:11
+    app/controllers/users_controller.rb:21:in `show'
+
+Rendered rescues/_trace (102.4ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 192.168.27.247 at 2011-01-18 19:17:08) [GET]
+  Parameters: {"id"=>"23"}
+  [4;35;1mUser Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 23) [0m
+Rendering template within layouts/users
+Rendering users/show
+  [4;35;1mPlaylist Load (0.3ms)[0m   [0mSELECT * FROM `playlists` WHERE (`playlists`.user_id = 23) [0m
+  [4;36;1mPlaylist Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `playlists`[0m
+  [4;35;1mTrack Load (0.9ms)[0m   [0mSELECT * FROM `tracks` WHERE (`tracks`.playlist_id = 38) LIMIT 1[0m
+  [4;36;1mTrack Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `tracks`[0m
+  [4;35;1mTrack Load (0.9ms)[0m   [0mSELECT * FROM `tracks` WHERE (`tracks`.playlist_id = 38) [0m
+Completed in 36ms (View: 23, DB: 4) | 200 OK [http://192.168.27.65/users/23]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 192.168.27.247 at 2011-01-18 19:21:39) [GET]
+  Parameters: {"id"=>"23"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 23) [0m
+Rendering template within layouts/users
+Rendering users/show
+  [4;36;1mPlaylist Load (0.1ms)[0m   [0;1mSELECT * FROM `playlists` WHERE (`playlists`.user_id = 23) [0m
+  [4;35;1mPlaylist Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `playlists`[0m
+  [4;36;1mTrack Load (0.2ms)[0m   [0;1mSELECT * FROM `tracks` WHERE (`tracks`.playlist_id = 38) LIMIT 1[0m
+  [4;35;1mTrack Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `tracks`[0m
+  [4;36;1mTrack Load (0.4ms)[0m   [0;1mSELECT * FROM `tracks` WHERE (`tracks`.playlist_id = 38) [0m
+Completed in 33ms (View: 22, DB: 3) | 200 OK [http://192.168.27.65/users/23]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 192.168.27.247 at 2011-01-18 19:21:53) [GET]
+  Parameters: {"id"=>"23"}
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 23) [0m
+Rendering template within layouts/users
+Rendering users/show
+  [4;35;1mPlaylist Load (0.3ms)[0m   [0mSELECT * FROM `playlists` WHERE (`playlists`.user_id = 23) [0m
+  [4;36;1mPlaylist Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `playlists`[0m
+  [4;35;1mTrack Load (0.3ms)[0m   [0mSELECT * FROM `tracks` WHERE (`tracks`.playlist_id = 38) LIMIT 1[0m
+  [4;36;1mTrack Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `tracks`[0m
+  [4;35;1mTrack Load (0.1ms)[0m   [0mSELECT * FROM `tracks` WHERE (`tracks`.playlist_id = 38) [0m
+Completed in 32ms (View: 21, DB: 3) | 200 OK [http://192.168.27.65/users/23]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 192.168.27.247 at 2011-01-18 19:22:59) [GET]
+  Parameters: {"id"=>"23"}
+  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 23) [0m
+Rendering template within layouts/users
+Rendering users/show
+  [4;36;1mPlaylist Load (0.3ms)[0m   [0;1mSELECT * FROM `playlists` WHERE (`playlists`.user_id = 23) [0m
+  [4;35;1mPlaylist Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `playlists`[0m
+  [4;36;1mTrack Load (0.3ms)[0m   [0;1mSELECT * FROM `tracks` WHERE (`tracks`.playlist_id = 38) LIMIT 1[0m
+  [4;35;1mTrack Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `tracks`[0m
+  [4;36;1mTrack Load (0.4ms)[0m   [0;1mSELECT * FROM `tracks` WHERE (`tracks`.playlist_id = 38) [0m
+Completed in 89ms (View: 78, DB: 4) | 200 OK [http://192.168.27.65/users/23]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 192.168.27.247 at 2011-01-18 19:23:24) [GET]
+  Parameters: {"id"=>"23"}
+  [4;35;1mUser Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 23) [0m
+Rendering template within layouts/users
+Rendering users/show
+  [4;35;1mPlaylist Load (0.2ms)[0m   [0mSELECT * FROM `playlists` WHERE (`playlists`.user_id = 23) [0m
+  [4;36;1mPlaylist Columns (0.3ms)[0m   [0;1mSHOW FIELDS FROM `playlists`[0m
+  [4;35;1mTrack Load (0.2ms)[0m   [0mSELECT * FROM `tracks` WHERE (`tracks`.playlist_id = 38) LIMIT 1[0m
+  [4;36;1mTrack Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `tracks`[0m
+  [4;35;1mTrack Load (0.3ms)[0m   [0mSELECT * FROM `tracks` WHERE (`tracks`.playlist_id = 38) [0m
+Completed in 34ms (View: 23, DB: 2) | 200 OK [http://192.168.27.65/users/23]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 192.168.27.247 at 2011-01-18 19:23:27) [GET]
+  Parameters: {"id"=>"23"}
+  [4;36;1mUser Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 23) [0m
+Rendering template within layouts/users
+Rendering users/show
+  [4;36;1mPlaylist Load (0.4ms)[0m   [0;1mSELECT * FROM `playlists` WHERE (`playlists`.user_id = 23) [0m
+  [4;35;1mPlaylist Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `playlists`[0m
+  [4;36;1mTrack Load (0.4ms)[0m   [0;1mSELECT * FROM `tracks` WHERE (`tracks`.playlist_id = 38) LIMIT 1[0m
+  [4;35;1mTrack Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `tracks`[0m
+  [4;36;1mTrack Load (0.2ms)[0m   [0;1mSELECT * FROM `tracks` WHERE (`tracks`.playlist_id = 38) [0m
+Completed in 27ms (View: 17, DB: 3) | 200 OK [http://192.168.27.65/users/23]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 192.168.27.247 at 2011-01-18 19:23:39) [GET]
+  Parameters: {"id"=>"23"}
+  [4;35;1mUser Columns (0.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 23) [0m
+Rendering template within layouts/users
+Rendering users/show
+  [4;35;1mPlaylist Load (0.1ms)[0m   [0mSELECT * FROM `playlists` WHERE (`playlists`.user_id = 23) [0m
+  [4;36;1mPlaylist Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `playlists`[0m
+  [4;35;1mTrack Load (0.1ms)[0m   [0mSELECT * FROM `tracks` WHERE (`tracks`.playlist_id = 38) LIMIT 1[0m
+  [4;36;1mTrack Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `tracks`[0m
+  [4;35;1mTrack Load (1.0ms)[0m   [0mSELECT * FROM `tracks` WHERE (`tracks`.playlist_id = 38) [0m
+Completed in 27ms (View: 16, DB: 3) | 200 OK [http://192.168.27.65/users/23]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 192.168.27.247 at 2011-01-18 19:24:31) [GET]
+  Parameters: {"id"=>"23"}
+  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 23) [0m
+Rendering template within layouts/users
+Rendering users/show
+  [4;36;1mPlaylist Load (0.2ms)[0m   [0;1mSELECT * FROM `playlists` WHERE (`playlists`.user_id = 23) [0m
+  [4;35;1mPlaylist Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `playlists`[0m
+  [4;36;1mTrack Load (0.1ms)[0m   [0;1mSELECT * FROM `tracks` WHERE (`tracks`.playlist_id = 38) LIMIT 1[0m
+  [4;35;1mTrack Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `tracks`[0m
+  [4;36;1mTrack Load (0.7ms)[0m   [0;1mSELECT * FROM `tracks` WHERE (`tracks`.playlist_id = 38) [0m
+Completed in 32ms (View: 20, DB: 4) | 200 OK [http://192.168.27.65/users/23]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 192.168.27.247 at 2011-01-18 19:24:33) [GET]
+  Parameters: {"id"=>"23"}
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 23) [0m
+Rendering template within layouts/users
+Rendering users/show
+  [4;35;1mPlaylist Load (0.1ms)[0m   [0mSELECT * FROM `playlists` WHERE (`playlists`.user_id = 23) [0m
+  [4;36;1mPlaylist Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `playlists`[0m
+  [4;35;1mTrack Load (0.3ms)[0m   [0mSELECT * FROM `tracks` WHERE (`tracks`.playlist_id = 38) LIMIT 1[0m
+  [4;36;1mTrack Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `tracks`[0m
+  [4;35;1mTrack Load (0.1ms)[0m   [0mSELECT * FROM `tracks` WHERE (`tracks`.playlist_id = 38) [0m
+Completed in 28ms (View: 17, DB: 4) | 200 OK [http://192.168.27.65/users/23]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 192.168.27.247 at 2011-01-18 19:26:13) [GET]
+  Parameters: {"id"=>"23"}
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 23) [0m
+Rendering template within layouts/users
+Rendering users/show
+  [4;36;1mPlaylist Load (0.4ms)[0m   [0;1mSELECT * FROM `playlists` WHERE (`playlists`.user_id = 23) [0m
+  [4;35;1mPlaylist Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `playlists`[0m
+  [4;36;1mTrack Load (0.2ms)[0m   [0;1mSELECT * FROM `tracks` WHERE (`tracks`.playlist_id = 38) LIMIT 1[0m
+  [4;35;1mTrack Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `tracks`[0m
+  [4;36;1mTrack Load (0.3ms)[0m   [0;1mSELECT * FROM `tracks` WHERE (`tracks`.playlist_id = 38) [0m
+Completed in 27ms (View: 17, DB: 3) | 200 OK [http://192.168.27.65/users/23]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 192.168.27.247 at 2011-01-18 19:26:25) [GET]
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering template within layouts/users
+Rendering users/index
+  [4;36;1mUser Columns (0.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 14ms (View: 7, DB: 1) | 200 OK [http://192.168.27.65/users/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#destroy (for 192.168.27.247 at 2011-01-18 19:26:28) [DELETE]
+  Parameters: {"authenticity_token"=>"QzE6VL6yFilEY8ZSUCmPP/tupszu+F2QYXfboJGSKjg=", "id"=>"23"}
+  [4;35;1mUser Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 23) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Destroy (0.2ms)[0m   [0;1mDELETE FROM `users` WHERE `id` = 23[0m
+  [4;35;1mSQL (3.5ms)[0m   [0mCOMMIT[0m
+Redirected to http://192.168.27.65:3000/users
+Completed in 14ms (DB: 5) | 302 Found [http://192.168.27.65/users/23]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 192.168.27.247 at 2011-01-18 19:26:28) [GET]
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM `users` [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 10ms (View: 2, DB: 1) | 200 OK [http://192.168.27.65/users]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 192.168.27.247 at 2011-01-18 19:28:00) [GET]
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/users
+Rendering users/new
+Completed in 15ms (View: 7, DB: 2) | 200 OK [http://192.168.27.65/users/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 192.168.27.247 at 2011-01-18 19:28:30) [POST]
+  Parameters: {"user"=>{"name"=>"namikonada"}, "commit"=>"Get Playlists", "authenticity_token"=>"QzE6VL6yFilEY8ZSUCmPP/tupszu+F2QYXfboJGSKjg="}
+  [4;36;1mUser Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` = 'namikonada') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.6ms)[0m   [0mINSERT INTO `users` (`name`, `updated_at`, `created_at`) VALUES('namikonada', '2011-01-18 19:28:31', '2011-01-18 19:28:31')[0m
+  [4;36;1mSQL (16.9ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mPlaylist Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `playlists`[0m
+  [4;36;1mPlaylist Load (0.4ms)[0m   [0;1mSELECT * FROM `playlists` WHERE (`playlists`.`lastfm_id` = '8142029') AND (`playlists`.user_id = 24) LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mPlaylist Create (0.3ms)[0m   [0;1mINSERT INTO `playlists` (`name`, `updated_at`, `playlist_url`, `lastfm_id`, `user_id`, `created_at`) VALUES('Jan Faves', '2011-01-18 19:28:31', 'lastfm://playlist/8142029', 8142029, 24, '2011-01-18 19:28:31')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mTrack Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `tracks`[0m
+  [4;35;1mTrack Load (1.0ms)[0m   [0mSELECT * FROM `tracks` WHERE (`tracks`.`track_name` = 'New Flowers' AND `tracks`.`artist_name` = 'Tanlines') AND (`tracks`.playlist_id = 39) LIMIT 1[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTrack Create (0.4ms)[0m   [0mINSERT INTO `tracks` (`playlist_id`, `updated_at`, `track_name`, `artist_name`, `yt_url`, `lastfm_id`, `created_at`) VALUES(39, '2011-01-18 19:28:32', 'New Flowers', 'Tanlines', 'http://www.youtube.com/watch?v=uFmqaq4aAro&feature=youtube_gdata_player', NULL, '2011-01-18 19:28:32')[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mTrack Load (0.9ms)[0m   [0mSELECT * FROM `tracks` WHERE (`tracks`.`track_name` = 'Take It Easy' AND `tracks`.`artist_name` = 'Surfer Blood') AND (`tracks`.playlist_id = 39) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTrack Create (0.2ms)[0m   [0mINSERT INTO `tracks` (`playlist_id`, `updated_at`, `track_name`, `artist_name`, `yt_url`, `lastfm_id`, `created_at`) VALUES(39, '2011-01-18 19:28:32', 'Take It Easy', 'Surfer Blood', 'http://www.youtube.com/watch?v=qSeAwowu8GE&feature=youtube_gdata_player', NULL, '2011-01-18 19:28:32')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mTrack Load (1.2ms)[0m   [0mSELECT * FROM `tracks` WHERE (`tracks`.`track_name` = 'Lately (Deuxième)' AND `tracks`.`artist_name` = 'Memoryhouse') AND (`tracks`.playlist_id = 39) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTrack Create (0.2ms)[0m   [0mINSERT INTO `tracks` (`playlist_id`, `updated_at`, `track_name`, `artist_name`, `yt_url`, `lastfm_id`, `created_at`) VALUES(39, '2011-01-18 19:28:32', 'Lately (Deuxième)', 'Memoryhouse', 'http://www.youtube.com/watch?v=XQWvWMyB9xM&feature=youtube_gdata_player', NULL, '2011-01-18 19:28:32')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mTrack Load (0.8ms)[0m   [0mSELECT * FROM `tracks` WHERE (`tracks`.`track_name` = 'You do you' AND `tracks`.`artist_name` = 'Bear in Heaven') AND (`tracks`.playlist_id = 39) LIMIT 1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTrack Create (0.3ms)[0m   [0mINSERT INTO `tracks` (`playlist_id`, `updated_at`, `track_name`, `artist_name`, `yt_url`, `lastfm_id`, `created_at`) VALUES(39, '2011-01-18 19:28:33', 'You do you', 'Bear in Heaven', 'http://www.youtube.com/watch?v=vtH9MWGaAKw&feature=youtube_gdata_player', NULL, '2011-01-18 19:28:33')[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mTrack Load (1.2ms)[0m   [0mSELECT * FROM `tracks` WHERE (`tracks`.`track_name` = 'Collector' AND `tracks`.`artist_name` = 'Here We Go Magic') AND (`tracks`.playlist_id = 39) LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTrack Create (0.4ms)[0m   [0mINSERT INTO `tracks` (`playlist_id`, `updated_at`, `track_name`, `artist_name`, `yt_url`, `lastfm_id`, `created_at`) VALUES(39, '2011-01-18 19:28:33', 'Collector', 'Here We Go Magic', 'http://www.youtube.com/watch?v=EKLKszXzHts&feature=youtube_gdata_player', NULL, '2011-01-18 19:28:33')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mTrack Load (1.1ms)[0m   [0mSELECT * FROM `tracks` WHERE (`tracks`.`track_name` = 'Mien' AND `tracks`.`artist_name` = 'MillionYoung') AND (`tracks`.playlist_id = 39) LIMIT 1[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTrack Create (0.4ms)[0m   [0mINSERT INTO `tracks` (`playlist_id`, `updated_at`, `track_name`, `artist_name`, `yt_url`, `lastfm_id`, `created_at`) VALUES(39, '2011-01-18 19:28:33', 'Mien', 'MillionYoung', 'http://www.youtube.com/watch?v=hoDQt55qzQk&feature=youtube_gdata_player', NULL, '2011-01-18 19:28:33')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mTrack Load (0.8ms)[0m   [0mSELECT * FROM `tracks` WHERE (`tracks`.`track_name` = 'New Theory' AND `tracks`.`artist_name` = 'Washed Out') AND (`tracks`.playlist_id = 39) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTrack Create (0.3ms)[0m   [0mINSERT INTO `tracks` (`playlist_id`, `updated_at`, `track_name`, `artist_name`, `yt_url`, `lastfm_id`, `created_at`) VALUES(39, '2011-01-18 19:28:34', 'New Theory', 'Washed Out', 'http://www.youtube.com/watch?v=SnTf70aX2ms&feature=youtube_gdata_player', NULL, '2011-01-18 19:28:34')[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mTrack Load (1.0ms)[0m   [0mSELECT * FROM `tracks` WHERE (`tracks`.`track_name` = 'Real Life' AND `tracks`.`artist_name` = 'Tanlines') AND (`tracks`.playlist_id = 39) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTrack Create (0.2ms)[0m   [0mINSERT INTO `tracks` (`playlist_id`, `updated_at`, `track_name`, `artist_name`, `yt_url`, `lastfm_id`, `created_at`) VALUES(39, '2011-01-18 19:28:34', 'Real Life', 'Tanlines', 'http://www.youtube.com/watch?v=YtijpfnJzMo&feature=youtube_gdata_player', NULL, '2011-01-18 19:28:34')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mTrack Load (1.2ms)[0m   [0mSELECT * FROM `tracks` WHERE (`tracks`.`track_name` = 'Heartbeat' AND `tracks`.`artist_name` = 'Blackbird Blackbird') AND (`tracks`.playlist_id = 39) LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTrack Create (0.3ms)[0m   [0mINSERT INTO `tracks` (`playlist_id`, `updated_at`, `track_name`, `artist_name`, `yt_url`, `lastfm_id`, `created_at`) VALUES(39, '2011-01-18 19:28:34', 'Heartbeat', 'Blackbird Blackbird', 'http://www.youtube.com/watch?v=YphfwlMxhMA&feature=youtube_gdata_player', NULL, '2011-01-18 19:28:34')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mTrack Load (2.3ms)[0m   [0mSELECT * FROM `tracks` WHERE (`tracks`.`track_name` = 'Slow' AND `tracks`.`artist_name` = 'Twin Shadow') AND (`tracks`.playlist_id = 39) LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTrack Create (0.2ms)[0m   [0mINSERT INTO `tracks` (`playlist_id`, `updated_at`, `track_name`, `artist_name`, `yt_url`, `lastfm_id`, `created_at`) VALUES(39, '2011-01-18 19:28:35', 'Slow', 'Twin Shadow', 'http://www.youtube.com/watch?v=hyO7P6LE7nA&feature=youtube_gdata_player', NULL, '2011-01-18 19:28:35')[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mTrack Load (1.1ms)[0m   [0mSELECT * FROM `tracks` WHERE (`tracks`.`track_name` = 'Isabella of Castile' AND `tracks`.`artist_name` = 'Starfucker') AND (`tracks`.playlist_id = 39) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTrack Create (0.0ms)[0m   [0mINSERT INTO `tracks` (`playlist_id`, `updated_at`, `track_name`, `artist_name`, `yt_url`, `lastfm_id`, `created_at`) VALUES(39, '2011-01-18 19:28:35', 'Isabella of Castile', 'Starfucker', 'http://www.youtube.com/watch?v=ldABOh4IrJ8&feature=youtube_gdata_player', NULL, '2011-01-18 19:28:35')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mTrack Load (1.1ms)[0m   [0mSELECT * FROM `tracks` WHERE (`tracks`.`track_name` = 'You\'ll See It' AND `tracks`.`artist_name` = 'Washed Out') AND (`tracks`.playlist_id = 39) LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTrack Create (0.0ms)[0m   [0mINSERT INTO `tracks` (`playlist_id`, `updated_at`, `track_name`, `artist_name`, `yt_url`, `lastfm_id`, `created_at`) VALUES(39, '2011-01-18 19:28:35', 'You\'ll See It', 'Washed Out', 'http://www.youtube.com/watch?v=Jd_kKqvnmKI&feature=youtube_gdata_player', NULL, '2011-01-18 19:28:35')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://192.168.27.65:3000/users/24
+Completed in 5108ms (DB: 53) | 302 Found [http://192.168.27.65/users]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 192.168.27.247 at 2011-01-18 19:28:35) [GET]
+  Parameters: {"id"=>"24"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 24) [0m
+Rendering template within layouts/users
+Rendering users/show
+  [4;35;1mPlaylist Load (0.5ms)[0m   [0mSELECT * FROM `playlists` WHERE (`playlists`.user_id = 24) [0m
+  [4;36;1mPlaylist Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `playlists`[0m
+  [4;35;1mTrack Load (0.7ms)[0m   [0mSELECT * FROM `tracks` WHERE (`tracks`.playlist_id = 39) LIMIT 1[0m
+  [4;36;1mTrack Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `tracks`[0m
+  [4;35;1mTrack Load (0.8ms)[0m   [0mSELECT * FROM `tracks` WHERE (`tracks`.playlist_id = 39) [0m
+Completed in 28ms (View: 16, DB: 5) | 200 OK [http://192.168.27.65/users/24]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 192.168.27.247 at 2011-01-18 19:36:35) [GET]
+  Parameters: {"id"=>"24"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 24) [0m
+Rendering template within layouts/users
+Rendering users/show
+  [4;36;1mPlaylist Load (0.3ms)[0m   [0;1mSELECT * FROM `playlists` WHERE (`playlists`.user_id = 24) [0m
+  [4;35;1mPlaylist Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `playlists`[0m
+  [4;36;1mTrack Load (0.3ms)[0m   [0;1mSELECT * FROM `tracks` WHERE (`tracks`.playlist_id = 39) LIMIT 1[0m
+  [4;35;1mTrack Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `tracks`[0m
+  [4;36;1mTrack Load (0.1ms)[0m   [0;1mSELECT * FROM `tracks` WHERE (`tracks`.playlist_id = 39) [0m
+Completed in 27ms (View: 17, DB: 3) | 200 OK [http://192.168.27.65/users/24]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 192.168.27.247 at 2011-01-18 19:38:44) [GET]
+  Parameters: {"id"=>"24"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 24) [0m
+Rendering template within layouts/users
+Rendering users/show
+  [4;35;1mPlaylist Load (0.3ms)[0m   [0mSELECT * FROM `playlists` WHERE (`playlists`.user_id = 24) [0m
+  [4;36;1mPlaylist Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `playlists`[0m
+  [4;35;1mTrack Load (0.1ms)[0m   [0mSELECT * FROM `tracks` WHERE (`tracks`.playlist_id = 39) LIMIT 1[0m
+  [4;36;1mTrack Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `tracks`[0m
+  [4;35;1mTrack Load (0.0ms)[0m   [0mSELECT * FROM `tracks` WHERE (`tracks`.playlist_id = 39) [0m
+Completed in 92ms (View: 81, DB: 4) | 200 OK [http://192.168.27.65/users/24]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 192.168.27.247 at 2011-01-18 20:05:58) [GET]
+  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/users
+Rendering users/new
+Completed in 49ms (View: 32, DB: 1) | 200 OK [http://192.168.27.65/]

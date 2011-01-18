@@ -10,7 +10,12 @@
 
 <% @user.playlists.each do |playlist| %>
   <tr>
-    <td><%=h playlist.name %></td>
+    <a href="<%= playlist.tracks.first.yt_url %>" rel="prettyPhoto[<%= playlist.id %>]">
+      <td><%=h playlist.name %></td>
+    </a>
+    <% playlist.tracks.each do |track| %>
+      <a href="<%= track.yt_url %>" rel="prettyPhoto[<%= playlist.id %>]">a</a>
+    <% end %>
   </tr>
 <% end %>
 </table>

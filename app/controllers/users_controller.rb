@@ -57,7 +57,7 @@ class UsersController < ApplicationController
             track_search_name = t["creator"] + " " + t["title"]  
             ytreply = ytclient.videos_by(:query => track_search_name, :max_results => 1, :format => 5, :category => 'music') 
             if ytreply.videos != []
-              @newp.tracks.find_or_create_by_track_name_and_artist_name(:track_name => t["title"], :artist_name => t["creator"], :yt_url => ytreply.videos.first.embed_url)
+              @newp.tracks.find_or_create_by_track_name_and_artist_name(:track_name => t["title"], :artist_name => t["creator"], :yt_url => ytreply.videos.first.player_url)
             end
           end
         end
@@ -73,7 +73,7 @@ class UsersController < ApplicationController
             track_search_name = t["creator"] + " " + t["title"]  
             ytreply = ytclient.videos_by(:query => track_search_name, :max_results => 1, :format => 5, :category => 'music')
             if ytreply.videos != []
-              @newp.tracks.find_or_create_by_track_name_and_artist_name(:track_name => t["title"], :artist_name => t["creator"], :yt_url => ytreply.videos.first.embed_url)
+              @newp.tracks.find_or_create_by_track_name_and_artist_name(:track_name => t["title"], :artist_name => t["creator"], :yt_url => ytreply.videos.first.player_url)
             end
           end
         end
