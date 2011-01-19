@@ -1,0 +1,4 @@
+rails -v 2.3.8
+will_paginate -v 2.3.12
+hoptoad_notifier
+youtube_it -v 0.0.7
