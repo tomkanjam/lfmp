@@ -39,7 +39,7 @@ class UsersController < ApplicationController
     require 'open-uri'
   	LastFM.api_key = "c44173b28da0543a105aece7c1ad4e17"
     LastFM.client_name = "gigkong"
-    ytclient = YouTubeIt::Client.new
+    ytclient = YouTubeIt::Client.new(:dev_key => "AI39si59NcA_DXFPnwRu1g9siXAze22t2YeICB8bt5s6TG7OG9uBvE83qKv2p_GXTKGaIQkd4x3U2aghthm495-g6EhbISvuNg")
     
     #check if user exists and get playlists
     @playlists = LastFM::User.get_playlists(:user => params[:user][:name])
@@ -89,6 +89,15 @@ class UsersController < ApplicationController
     end 
   end
 
+  def authorise
+    client = GData::Client::DocList.new
+    if params[:token]
+      client.authsub_token = params[:token] # extract the single-use token from the URL query params
+      session[:token] = client.auth_handler.upgrade()
+      client.authsub_token = session[:token] if session[:token]
+    end
+    redirect_to videos_path
+  end
 
   def update
     @user = User.find(params[:id])
