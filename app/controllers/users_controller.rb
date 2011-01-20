@@ -47,6 +47,7 @@ class UsersController < ApplicationController
     
     #check if user exists and get playlists
     @playlists = LastFM::User.get_playlists(:user => params[:user][:name])
+    logger.debug "@playlists: #{@playlists}"
     if @playlists["error"] == 6
       redirect_to("/", :notice => 'We couldnt find that Username. Try again!')
     else
