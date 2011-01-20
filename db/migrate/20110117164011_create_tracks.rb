@@ -5,6 +5,7 @@ class CreateTracks < ActiveRecord::Migration
       t.string :track_name
       t.string :artist_name
       t.integer :lastfm_id
+      t.string :yt_url
 
       t.timestamps
     end
