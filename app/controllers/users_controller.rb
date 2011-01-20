@@ -3,7 +3,7 @@ require 'youtube_it'
 
 
 class UsersController < ApplicationController
-   
+  before_filter :initialize_user
   def index
     @users = User.all
 
@@ -77,28 +77,16 @@ class UsersController < ApplicationController
             end
           end
         end
-              
-        
-        #@np = @u.playlists.build(:name => @p["playlists"]["playlist"]["title"], :lastfm_id => @p["playlists"]["playlist"]["id"])  
-        #@np.save
-    
+  
       else
         redirect_to("http://192.168.27.65:3000", :notice => 'Sorry, something went wrong. We\'re working on it!') and return
       end
       redirect_to @u
     end 
+    
   end
 
-  def authorise
-    client = GData::Client::DocList.new
-    if params[:token]
-      client.authsub_token = params[:token] # extract the single-use token from the URL query params
-      session[:token] = client.auth_handler.upgrade()
-      client.authsub_token = session[:token] if session[:token]
-    end
-    redirect_to videos_path
-  end
-
+  
   def update
     @user = User.find(params[:id])
 

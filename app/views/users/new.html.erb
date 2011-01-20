@@ -10,4 +10,14 @@
   <p>
     <%= f.submit 'Get Playlists' %>
   </p>
+  
+  
+<% end %>
+
+<% if @username %>
+<p>You are logged in to this site via YouTube as <%= @username %>!</p>
+<br><br>
+<p><%= link_to 'Log out', :controller => :session, :action => :destroy %></p>
+<% else %>
+<%= link_to 'Log in via YouTube', :controller => :session, :action => :new %>
 <% end %>
