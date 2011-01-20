@@ -1,6 +1,6 @@
 require 'lastfm'
 require 'youtube_it'
-
+require 'open-uri'
 
 class UsersController < ApplicationController
   before_filter :initialize_user
@@ -40,7 +40,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    require 'open-uri'
+    
   	LastFM.api_key = "c44173b28da0543a105aece7c1ad4e17"
     LastFM.client_name = "gigkong"
     ytclient = YouTubeIt::Client.new(:dev_key => "AI39si59NcA_DXFPnwRu1g9siXAze22t2YeICB8bt5s6TG7OG9uBvE83qKv2p_GXTKGaIQkd4x3U2aghthm495-g6EhbISvuNg")
