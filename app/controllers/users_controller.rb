@@ -44,7 +44,7 @@ class UsersController < ApplicationController
     #check if user exists and get playlists
     @playlists = LastFM::User.get_playlists(:user => params[:user][:name])
     if @playlists["error"] == 6
-      redirect_to("http://192.168.27.65:3000", :notice => 'We couldnt find that Username. Try again!')
+      redirect_to("/", :notice => 'We couldnt find that Username. Try again!')
     else
       @u = User.find_or_create_by_name(params[:user][:name])
       
@@ -64,7 +64,7 @@ class UsersController < ApplicationController
   
       elsif @playlists.has_key?("playlists")
         if @playlists["playlists"].has_key?("user")
-          redirect_to("http://192.168.27.65:3000", :notice => 'This user does not have any Last.fm playlists') and return
+          redirect_to("/", :notice => 'This user does not have any Last.fm playlists') and return
         elsif @playlists["playlists"]["playlist"].has_key?("title")
           url = "lastfm://playlist/" << @playlists["playlists"]["playlist"]["id"]
           @newp = @u.playlists.find_or_create_by_lastfm_id(:lastfm_id => @playlists["playlists"]["playlist"]["id"], :name => @playlists["playlists"]["playlist"]["title"], :playlist_url => url)
@@ -79,7 +79,7 @@ class UsersController < ApplicationController
         end
   
       else
-        redirect_to("http://192.168.27.65:3000", :notice => 'Sorry, something went wrong. We\'re working on it!') and return
+        redirect_to("/", :notice => 'Sorry, something went wrong. We\'re working on it!') and return
       end
       redirect_to @u
     end 

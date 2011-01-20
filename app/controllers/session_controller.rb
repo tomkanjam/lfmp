@@ -27,7 +27,7 @@ class SessionController < ApplicationController
     #logger.debug
     session[:oauth_secret] = access_token.secret
     #logger.debug
-    redirect_to "http://192.168.27.65:3000"
+    redirect_to "/"
   end
   
   def destroy
