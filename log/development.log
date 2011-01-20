@@ -11063,3 +11063,5 @@ Rendering users/show
   [4;35;1mTrack Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `tracks`[0m
   [4;36;1mTrack Load (0.3ms)[0m   [0;1mSELECT * FROM `tracks` WHERE (`tracks`.playlist_id = 1) [0m
 Completed in 29ms (View: 16, DB: 4) | 200 OK [http://192.168.27.65/users/1]
+
+***** Debugger requested, but was not available: Start server with --debugger to enable *****
