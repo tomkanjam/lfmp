@@ -28,6 +28,10 @@ class UsersController < ApplicationController
   def new
     @user = User.new
     
+    if @access_token
+      body = @access_token.get("http://gdata.youtube.com/feeds/api/users/default").body
+      @username = Nokogiri::XML.parse(body).search("author").children.first.text
+    end
   end
 
 
