@@ -22,6 +22,7 @@ Rails::Initializer.run do |config|
   config.gem 'gdata', :lib => 'gdata'
   config.gem 'oauth'
   config.gem 'nokogiri'
+  config.gem 'hoptoad_notifier'
 
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named
