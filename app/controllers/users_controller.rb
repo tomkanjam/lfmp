@@ -45,7 +45,7 @@ class UsersController < ApplicationController
     ytclient = YouTubeIt::Client.new(:dev_key => "AI39si59NcA_DXFPnwRu1g9siXAze22t2YeICB8bt5s6TG7OG9uBvE83qKv2p_GXTKGaIQkd4x3U2aghthm495-g6EhbISvuNg")
     
     #check if user exists and get playlists
-    @playlists = LastFM::User.get_playlists(:user => params[:user][:name], 'User-Agent' => 'ruby')
+    @playlists = LastFM::User.get_playlists(:user => params[:user][:name])
     logger.debug "@playlists: #{@playlists}"
     if @playlists["error"] == 6
       redirect_to("/", :notice => 'We couldnt find that Username. Try again!')
