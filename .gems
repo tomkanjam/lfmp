@@ -4,3 +4,4 @@ youtube_it -v 0.0.7
 gdata
 oauth
 nokogiri
+open-uri
