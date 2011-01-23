@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(:version => 20110117164704) do
     t.integer  "lastfm_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "ut_url"
     t.string   "yt_url"
   end
 
