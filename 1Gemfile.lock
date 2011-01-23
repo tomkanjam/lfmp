@@ -1,0 +1,47 @@
+GIT
+  remote: git://github.com/pch/lastfm-client.git
+  revision: 9613c9a73ca6bb90a0acb327020fd3322415315e
+  specs:
+    lastfm-client (0.0.1)
+      json (~> 1.4.6)
+
+GEM
+  specs:
+    actionmailer (2.3.8)
+      actionpack (= 2.3.8)
+    actionpack (2.3.8)
+      activesupport (= 2.3.8)
+      rack (~> 1.1.0)
+    activerecord (2.3.8)
+      activesupport (= 2.3.8)
+    activeresource (2.3.8)
+      activesupport (= 2.3.8)
+    activesupport (2.3.8)
+    gdata (1.1.1)
+    json (1.4.6)
+    nokogiri (1.4.4)
+    oauth (0.4.4)
+    rack (1.1.0)
+    rails (2.3.8)
+      actionmailer (= 2.3.8)
+      actionpack (= 2.3.8)
+      activerecord (= 2.3.8)
+      activeresource (= 2.3.8)
+      activesupport (= 2.3.8)
+      rake (>= 0.8.3)
+    rake (0.8.7)
+    will_paginate (2.3.12)
+    youtube_it (0.0.7)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  gdata (= 1.1.1)
+  lastfm-client!
+  nokogiri (= 1.4.4)
+  oauth (= 0.4.4)
+  rails (= 2.3.8)
+  rake
+  will_paginate (= 2.3.12)
+  youtube_it (= 0.0.7)
