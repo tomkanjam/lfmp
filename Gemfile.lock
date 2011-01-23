@@ -42,5 +42,6 @@ DEPENDENCIES
   nokogiri (= 1.4.4)
   oauth (= 0.4.4)
   rails (= 2.3.8)
+  rake
   will_paginate (= 2.3.12)
   youtube_it (= 0.0.7)
