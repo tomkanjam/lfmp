@@ -5,6 +5,4 @@ gem "oauth", "0.4.4"
 gem "nokogiri", "1.4.4"
 gem "youtube_it", "0.0.7"
 gem "rake"
-git 'git://github.com/pch/lastfm-client.git' do
-  gem "lastfm-client"
-end
+
